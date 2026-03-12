@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot của Thu</title>
+</head>
+
+<body>
+
+<h1>Chatbot của Thu</h1>
+
+<!-- Coze Chat SDK -->
+<script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
+
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: "7616243188504084485"
+    },
+
+    componentProps: {
+      title: "Chatbot của Thu"
+    },
+
+    auth: {
+      type: "token",
+      token: "pat_********",
+      onRefreshToken: async function () {
+        return "pat_********"
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
